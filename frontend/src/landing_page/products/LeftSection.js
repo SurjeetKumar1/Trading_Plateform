@@ -10,26 +10,29 @@ function LeftSection({
 }) {
   return (
     <div className="container">
-      <div className="row ">
-        <div className="col-6 mt-5">
-          <img src={imageUrl}  />
+      <div className="row align-items-center">
+
+        <div className="col-12 col-md-6 mt-4 mt-md-5 text-center text-md-start">
+          <img src={imageUrl} className="img-fluid w-75 w-md-100" alt={productName} />
         </div>
-        <div className="col-6 p-5 mt-5">
-          <h1>{productName}</h1>
-          <p>{productDescription}</p>
-          <div>
-            {" "}
+
+
+        <div className="col-12 col-md-6 p-3 p-md-5 mt-4 mt-md-5 text-center text-md-start">
+          <h1 className="fs-3 fs-md-1">{productName}</h1>
+          <p className="text-muted">{productDescription}</p>
+
+          <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3 mt-3">
             <a href={tryDemo}>Try Demo</a>
-            <a href={learnMore} style={{marginLeft:"3rem"}}>Learn More</a>
+            <a href={learnMore}>Learn More</a>
           </div>
-          <div className="mt-3">
+
+          <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start gap-3 mt-4">
             <a href={googlePlay}>
-              <img src="media/images/googlePlayBadge.svg" />
+              <img src="media/images/googlePlayBadge.svg" className="img-fluid" alt="Google Play" />
             </a>
-            <a href={appStore} style={{marginLeft:"3rem"}}>
-              <img src="media/images/appstoreBadge.svg" />
+            <a href={appStore}>
+              <img src="media/images/appstoreBadge.svg" className="img-fluid" alt="App Store" />
             </a>
-            <a href="/"></a>
           </div>
         </div>
       </div>
